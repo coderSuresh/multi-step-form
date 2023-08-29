@@ -7,10 +7,12 @@ export const metadata: Metadata = {
   description: 'Multi Step Form with Next.js, TypeScript, and Tailwind CSS by coderSuresh',
 }
 
-export default function RootLayout({ children }: childrenProps) {
+const RootLayout = ({ children }: childrenProps) => {
   return (
     <html lang="en">
       <body>{children}</body>
     </html>
   )
 }
+
+export default RootLayout
