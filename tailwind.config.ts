@@ -19,6 +19,10 @@ const config: Config = {
         'magnolia': 'var(--magnolia)',
         'alabaster': 'var(--alabaster)',
         'white': 'var(--white)',
+      },
+
+      backgroundImage: {
+        'desktop-sidebar': 'url("/assets/images/bg-sidebar-desktop.svg")',
       }
     },
   },
