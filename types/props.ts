@@ -5,4 +5,5 @@ export type ChildrenProps = {
 export type LeftSectionBulletProps = {
     step: number,
     title: string,
+    active: boolean,
 }
