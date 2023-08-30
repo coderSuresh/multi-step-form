@@ -14,9 +14,9 @@ const config: Config = {
         'light-blue': 'var(--light-blue)',
         'pastel-blue': 'var(--pastel-blue)',
         'strawberry-red': 'var(--strawberry-red)',
-        'cool-grey': 'var(--cool-grey)',
-        'light-grey': 'var(--light-grey)',
-        'mangolia': 'var(--mangolia)',
+        'cool-gray': 'var(--cool-gray)',
+        'light-gray': 'var(--light-gray)',
+        'magnolia': 'var(--magnolia)',
         'alabaster': 'var(--alabaster)',
         'white': 'var(--white)',
       }
