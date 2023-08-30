@@ -1,13 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import childrenProps from '@/types/childrenProps'
+import {ChildrenProps} from '@/types/props'
 
 export const metadata: Metadata = {
   title: 'Multi Step Form',
   description: 'Multi Step Form with Next.js, TypeScript, and Tailwind CSS by coderSuresh',
 }
 
-const RootLayout = ({ children }: childrenProps) => {
+const RootLayout = ({ children }: ChildrenProps) => {
   return (
     <html lang="en">
       <body>{children}</body>
