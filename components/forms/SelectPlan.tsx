@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
+import Plan from '@/components/forms/select_plan/Plan'
 
 const SelectPlan = () => {
 
@@ -17,40 +18,13 @@ const SelectPlan = () => {
     }
   }
 
-  const handlePlanChange = (plan: string) => {
-    setPlan(plan)
-  }
-
   return (
     <>
       <div className='flex gap-2 mt-10'>
 
-        <input type="radio" id='arcade' checked={plan === 'arcade'} onChange={() => handlePlanChange('arcade')} className='hidden' />
-        <label htmlFor="arcade">
-          <div className={`border ${plan === 'arcade' && 'border-strawberry-red'} cursor-pointer rounded-lg p-4 w-32`}>
-            <Image src='/assets/images/icon-arcade.svg' height={40} width={40} alt='arcade icon' aria-hidden='true' role='presentation' />
-            <h3 className="mt-8 font-semibold">Arcade</h3>
-            <p className="text-cool-gray">$9/mo</p>
-          </div>
-        </label>
-
-        <input type="radio" id='advanced' checked={plan === 'advanced'} onChange={() => handlePlanChange('advanced')} className='hidden' />
-        <label htmlFor="advanced">
-          <div className={`border ${plan === 'advanced' && 'border-strawberry-red'} cursor-pointer rounded-lg p-4 w-32`}>
-            <Image src='/assets/images/icon-advanced.svg' height={40} width={40} alt='advanced icon' aria-hidden='true' role='presentation' />
-            <h3 className="mt-8 font-semibold">Advanced</h3>
-            <p className="text-cool-gray">$12/mo</p>
-          </div>
-        </label>
-
-        <input type="radio" id='pro' checked={plan === 'pro'} onChange={() => handlePlanChange('pro')} className='hidden' />
-        <label htmlFor="pro">
-          <div className={`border ${plan === 'pro' && 'border-strawberry-red'} cursor-pointer rounded-lg p-4 w-32`}>
-            <Image src='/assets/images/icon-pro.svg' height={40} width={40} alt='pro icon' aria-hidden='true' role='presentation' />
-            <h3 className="mt-8 font-semibold">Pro</h3>
-            <p className="text-cool-gray">$15/mo</p>
-          </div>
-        </label>
+        <Plan name='arcade' plan={plan} price='$9/mo' setPlan={setPlan} />
+        <Plan name='advanced' plan={plan} price='$12/mo' setPlan={setPlan} />
+        <Plan name='pro' plan={plan} price='$15/mo' setPlan={setPlan} />
 
       </div>
 

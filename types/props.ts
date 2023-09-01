@@ -7,3 +7,10 @@ export type LeftSectionBulletProps = {
     title: string,
     active: boolean,
 }
+
+export type PlanProps = {
+    name: string,
+    price: string,
+    plan: React.SetStateAction<string>,
+    setPlan:React.Dispatch<React.SetStateAction<string>>,
+}
