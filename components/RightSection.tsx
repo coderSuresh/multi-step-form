@@ -2,7 +2,7 @@ import React from 'react'
 
 const RightSection = () => {
     return (
-        <div className="form__right p-10 text-marine-blue text-sm">
+        <div className="form__right mx-auto p-10 text-marine-blue text-sm">
 
             <div className="heading">
                 <h2 className="text-2xl font-bold">Personal info</h2>
