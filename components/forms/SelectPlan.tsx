@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import Image from 'next/image'
 import Plan from '@/components/forms/select_plan/Plan'
 
 const SelectPlan = () => {
