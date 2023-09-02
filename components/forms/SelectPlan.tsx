@@ -18,7 +18,7 @@ const SelectPlan = () => {
   }
 
   return (
-    <>
+    <div className='relative h-full'>
       <div className='flex gap-2 mt-10'>
 
         <Plan name='arcade' plan={plan} price='$9/mo' setPlan={setPlan} />
@@ -42,7 +42,12 @@ const SelectPlan = () => {
         <p className={`font-semibold ${billing === 'monthly' ? 'text-cool-gray' : ''}`}>Yearly</p>
       </div>
 
-    </>
+      <div className='flex justify-between mb-20 bottom-0 absolute w-full'>
+        <button onClick={() => {}} className='text-cool-gray'>Go Back</button>
+        <button type="submit" className="bg-marine-blue text-white rounded-lg px-4 py-2 font-semibold">Next Step</button>
+      </div>
+
+    </div>
   )
 }
 
