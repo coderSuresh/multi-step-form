@@ -4,7 +4,7 @@ import SelectPlan from './forms/SelectPlan'
 
 const RightSection = () => {
     return (
-        <div className="form__right mx-auto p-10 text-marine-blue text-sm h-full relative">
+        <div className="form__right mx-auto p-10 text-marine-blue text-sm w-full h-full relative">
 
             {/* <div className="heading">
                 <h2 className="text-2xl font-bold">Personal info</h2>
