@@ -18,7 +18,7 @@ const SelectPlan = () => {
   }
 
   return (
-    <div>
+    <>
       <div className='flex gap-2 mt-10'>
 
         <Plan name='arcade' plan={plan} price='$9/mo' setPlan={setPlan} />
@@ -47,7 +47,7 @@ const SelectPlan = () => {
         <button type="submit" className="bg-marine-blue w-fit absolute right-20 text-white rounded-lg px-4 py-2 font-semibold">Next Step</button>
       </div>
 
-    </div>
+    </>
   )
 }
 
