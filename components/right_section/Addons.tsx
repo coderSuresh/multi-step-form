@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import AddonCard from '@/components/forms/addons/AddonCard'
+import AddonCard from '@/components/right_section/addons/AddonCard'
 
 const Addons = () => {
 

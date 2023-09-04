@@ -1,8 +1,8 @@
 import React from 'react'
-import Personal from '@/components/forms/Personal'
-import SelectPlan from '@/components/forms/SelectPlan'
-import Addons from '@/components/forms/Addons'
-import Summary from '@/components/forms/Summary'
+import Personal from '@/components/right_section/Personal'
+import SelectPlan from '@/components/right_section/SelectPlan'
+import Addons from '@/components/right_section/Addons'
+import Summary from '@/components/right_section/Summary'
 
 const RightSection = () => {
     return (
@@ -34,7 +34,7 @@ const RightSection = () => {
             <Summary />
 
         </div>
-  )
+    )
 }
 
 export default RightSection
