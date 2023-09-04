@@ -1,6 +1,7 @@
 import React from 'react'
 import Personal from '@/components/forms/Personal'
-import SelectPlan from './forms/SelectPlan'
+import SelectPlan from '@/components/forms/SelectPlan'
+import Addons from '@/components/forms/Addons'
 
 const RightSection = () => {
     return (
@@ -11,13 +12,19 @@ const RightSection = () => {
                 <p className="text-cool-gray mt-1">Please provide your name, email address and phone number.</p>
             </div> */}
 
-            <div className="heading">
+            {/* <div className="heading">
                 <h2 className="text-2xl font-bold">Select your plan</h2>
                 <p className="text-cool-gray mt-1">You have the option of monthly or yearly billing.</p>
+            </div> */}
+
+            <div className="heading">
+                <h2 className="text-2xl font-bold">Pick add-ons</h2>
+                <p className="text-cool-gray mt-1">Addons help enhance your gaming experience.</p>
             </div>
 
             {/* <Personal /> */}
-            <SelectPlan />
+            {/* <SelectPlan /> */}
+            <Addons />
 
         </div>
   )

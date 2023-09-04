@@ -14,3 +14,9 @@ export type PlanProps = {
     plan: React.SetStateAction<string>,
     setPlan:React.Dispatch<React.SetStateAction<string>>,
 }
+
+export type AddonProps = {
+    title: string,
+    description: string,
+    price: string,
+}
