@@ -19,4 +19,6 @@ export type AddonProps = {
     title: string,
     description: string,
     price: string,
+    addons: string[],
+    setAddons: React.Dispatch<React.SetStateAction<string[]>>,
 }
