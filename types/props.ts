@@ -22,3 +22,8 @@ export type AddonProps = {
     addons: string[],
     setAddons: React.Dispatch<React.SetStateAction<string[]>>,
 }
+
+export type HeadingProps = {
+    title: string,
+    description: string,
+}
