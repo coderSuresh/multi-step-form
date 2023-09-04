@@ -14,8 +14,13 @@ const AddonCard = ({ title, description, price, addons, setAddons }: AddonProps)
     }
 
     return (
-        <div className={`${addons.includes(title) && 'border-purplish-blue bg-magnolia'} border w-full rounded-lg p-5 flex items-center gap-3 mb-4`}>
-            <input type="checkbox" onChange={() => handleAddonChange(title)} id={id} />
+        <div className={`${addons.includes(title) && 'border-purplish-blue bg-magnolia'} border w-full rounded-lg p-5 flex items-center gap-5 mb-4`}>
+            <input
+                type="checkbox"
+                onChange={() => handleAddonChange(title)}
+                id={id}
+                className='relative h-0 w-0 mr-3 before:border before:border-light-gray checked:before:content-["\f00c"] checked:before:font-["Fontawesome"] before:text-md before:flex before:items-center before:justify-center before:text-white before:h-5 before:w-5 before:rounded before:checked:bg-purplish-blue before:absolute before:-top-2  before:left-0'
+            />
             <label htmlFor={id} className='flex items-center w-full'>
                 <div className='flex-grow'>
                     <h3 className='font-semibold'>{title}</h3>
