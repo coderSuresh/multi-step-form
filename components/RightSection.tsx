@@ -3,6 +3,7 @@ import Personal from '@/components/right_section/Personal'
 import SelectPlan from '@/components/right_section/SelectPlan'
 import Addons from '@/components/right_section/Addons'
 import Summary from '@/components/right_section/Summary'
+import Thankyou from '@/components/right_section/Thankyou'
 
 const RightSection = () => {
     return (
@@ -23,15 +24,16 @@ const RightSection = () => {
                 <p className="text-cool-gray mt-1">Addons help enhance your gaming experience.</p>
             </div> */}
 
-            <div className="heading">
+            {/* <div className="heading">
                 <h2 className="text-2xl font-bold">Finishing up</h2>
                 <p className="text-cool-gray mt-1">Double check everything looks OK before confirming.</p>
-            </div>
+            </div> */}
 
             {/* <Personal /> */}
             {/* <SelectPlan /> */}
             {/* <Addons /> */}
-            <Summary />
+            {/* <Summary /> */}
+            <Thankyou />
 
         </div>
     )
