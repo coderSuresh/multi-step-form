@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import NextBackBtn from './NextBackBtn'
 
 const Summary = () => {
   return (
@@ -33,10 +34,7 @@ const Summary = () => {
         <p className='font-semibold text-lg text-purplish-blue'>+$12/mo</p>
       </div>
 
-      <div className='flex items-center justify-between mb-5 w-full absolute bottom-0'>
-        <button onClick={() => { }} className='text-cool-gray'>Go Back</button>
-        <button type="submit" className="bg-purplish-blue w-fit absolute right-20 text-white rounded-lg px-4 py-2 font-semibold">Confirm</button>
-      </div>
+      <NextBackBtn />
 
     </>
   )

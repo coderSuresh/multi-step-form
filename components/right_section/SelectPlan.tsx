@@ -1,8 +1,17 @@
 'use client'
 import React from 'react'
 import Plan from '@/components/right_section/select_plan/Plan'
+import StepContext from '@/context/StepContext'
+import NextBackBtn from './NextBackBtn'
 
 const SelectPlan = () => {
+
+  const { step, setStep } = React.useContext(StepContext)
+
+  const handleNextClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    setStep(step + 1)
+  }
 
   const [plan, setPlan] = React.useState('arcade')
   const [billing, setBilling] = React.useState('monthly')
@@ -42,10 +51,7 @@ const SelectPlan = () => {
         <p className={`font-semibold ${billing === 'monthly' ? 'text-cool-gray' : ''}`}>Yearly</p>
       </div>
 
-      <div className='flex items-center justify-between mb-5 w-full absolute bottom-0'>
-        <button onClick={() => { }} className='text-cool-gray'>Go Back</button>
-        <button type="submit" className="bg-marine-blue w-fit absolute right-20 text-white rounded-lg px-4 py-2 font-semibold">Next Step</button>
-      </div>
+     <NextBackBtn />
 
     </>
   )

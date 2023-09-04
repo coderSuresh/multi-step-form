@@ -1,4 +1,5 @@
 import React from 'react'
+import NextBackBtn from './NextBackBtn'
 
 const Personal = () => {
   return (
@@ -19,7 +20,7 @@ const Personal = () => {
         <input type="tel" id="phone" placeholder="eg: +1 234 567 890" className="border rounded mb-4 p-2 w-full" />
       </div>
 
-      <button type="submit" className="bg-marine-blue w-fit absolute bottom-0 mb-10 right-10 text-white rounded-lg px-4 py-2 mt-10 font-semibold">Next Step</button>
+      <NextBackBtn />
 
     </form>
   )

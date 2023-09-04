@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import AddonCard from '@/components/right_section/addons/AddonCard'
+import NextBackBtn from './NextBackBtn'
 
 const Addons = () => {
 
@@ -31,10 +32,7 @@ const Addons = () => {
           setAddons={setAddons}
         />
 
-        <div className='flex items-center justify-between mb-5 w-full absolute bottom-0'>
-          <button onClick={() => { }} className='text-cool-gray'>Go Back</button>
-          <button type="submit" className="bg-marine-blue w-fit absolute right-20 text-white rounded-lg px-4 py-2 font-semibold">Next Step</button>
-        </div>
+        <NextBackBtn />
       </div>
     </>
   )
