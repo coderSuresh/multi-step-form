@@ -57,10 +57,13 @@ const RightSection = () => {
     return (
         <div className="form__right mx-auto p-10 text-marine-blue text-sm w-full h-full relative">
 
-            <div className="heading">
-                <h2 className="text-2xl font-bold">{heading.title}</h2>
-                <p className="text-cool-gray mt-1">{heading.description}</p>
-            </div>
+            {
+                step <= 4 &&
+                <div className="heading">
+                    <h2 className="text-2xl font-bold">{heading.title}</h2>
+                    <p className="text-cool-gray mt-1">{heading.description}</p>
+                </div>
+            }
 
             {step === 1 && <Personal />}
             {step === 2 && <SelectPlan />}
