@@ -4,8 +4,12 @@ import SelectPlan from '@/components/right_section/SelectPlan'
 import Addons from '@/components/right_section/Addons'
 import Summary from '@/components/right_section/Summary'
 import Thankyou from '@/components/right_section/Thankyou'
+import StepContext from '@/context/StepContext'
 
 const RightSection = () => {
+
+    const { step } = React.useContext(StepContext)
+
     return (
         <div className="form__right mx-auto p-10 text-marine-blue text-sm w-full h-full relative">
 
@@ -29,11 +33,11 @@ const RightSection = () => {
                 <p className="text-cool-gray mt-1">Double check everything looks OK before confirming.</p>
             </div> */}
 
-            {/* <Personal /> */}
-            {/* <SelectPlan /> */}
-            {/* <Addons /> */}
-            {/* <Summary /> */}
-            <Thankyou />
+            { step === 1 && <Personal />}
+            { step === 2 && <SelectPlan />}
+            { step === 3 && <Addons />}
+            { step === 4 && <Summary />}
+            { step === 5 && <Thankyou />}
 
         </div>
     )
