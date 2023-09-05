@@ -8,11 +8,6 @@ const SelectPlan = () => {
 
   const { step, setStep } = React.useContext(StepContext)
 
-  const handleNextClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault()
-    setStep(step + 1)
-  }
-
   const [plan, setPlan] = React.useState('arcade')
   const [billing, setBilling] = React.useState('monthly')
 
