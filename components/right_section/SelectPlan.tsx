@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import Plan from '@/components/right_section/select_plan/Plan'
-import StepContext from '@/context/StepContext'
 import NextBackBtn from './NextBackBtn'
 
 const SelectPlan = () => {
