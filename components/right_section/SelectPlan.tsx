@@ -3,6 +3,7 @@ import React from 'react'
 import Plan from '@/components/right_section/select_plan/Plan'
 import NextBackBtn from './NextBackBtn'
 import { FormContext } from '@/context/FormContext'
+import { data } from '@/utils/data'
 
 const SelectPlan = () => {
 
@@ -10,6 +11,8 @@ const SelectPlan = () => {
 
   const [plan, setPlan] = React.useState<string>(formdata.plan || 'arcade')
   const [billing, setBilling] = React.useState<string>(formdata.billing || 'monthly')
+  const [pricing, setPricing] = React.useState<any>(data['monthly'])
+  const [billingTime, setBillingTime] = React.useState<string>('mo')
 
   const billTogglerRef = React.useRef<HTMLInputElement>(null)
 
@@ -28,20 +31,32 @@ const SelectPlan = () => {
     })
   }, [plan])
 
+  const getPricing = () => {
+    if (billing === 'monthly') {
+      setPricing(data['monthly'])
+      setBillingTime('mo')
+    } else {
+      setPricing(data['yearly'])
+      setBillingTime('yr')
+    }
+  }
+
   React.useEffect(() => {
     setFormData({
       ...formdata,
       billing: billing as 'monthly' | 'yearly'
     })
+    getPricing()
+
   }, [billing])
 
   return (
     <>
       <div className='flex gap-2 mt-10'>
 
-        <Plan name='arcade' plan={plan} price='$9/mo' setPlan={setPlan} />
-        <Plan name='advanced' plan={plan} price='$12/mo' setPlan={setPlan} />
-        <Plan name='pro' plan={plan} price='$15/mo' setPlan={setPlan} />
+        <Plan name='arcade' plan={plan} price={`$${pricing.arcade}/${billingTime}`} setPlan={setPlan} />
+        <Plan name='advanced' plan={plan} price={`$${pricing.advanced}/${billingTime}`} setPlan={setPlan} />
+        <Plan name='pro' plan={plan} price={`$${pricing.pro}/${billingTime}`} setPlan={setPlan} />
 
       </div>
 

@@ -1,14 +1,20 @@
 'use client'
 import React from 'react'
 import NextBackBtn from './NextBackBtn'
+import { FormContext } from '@/context/FormContext'
 
 const Summary = () => {
+
+  const { formdata, setFormData } = React.useContext(FormContext)
+  
   return (
     <>
       <div className="mt-10 bg-magnolia p-5 rounded-lg">
         <div className='flex items-center justify-between'>
           <div>
-            <h3 className='font-semibold'>Arcade (Monthly)</h3>
+            <h3 className='font-semibold'>
+              {formdata.plan?.charAt(0).toUpperCase()! + formdata.plan?.slice(1)} ({formdata.billing})
+            </h3>
             <p className='text-cool-gray underline'>Change</p>
           </div>
           <div>
@@ -30,8 +36,10 @@ const Summary = () => {
       </div>
 
       <div className='flex items-center justify-between p-5'>
-        <p className='text-cool-gray'>Total (per month)</p>
-        <p className='font-semibold text-lg text-purplish-blue'>+$12/mo</p>
+        <p className='text-cool-gray'>Total (per {formdata.billing?.split('ly')[0]})</p>
+        <p className='font-semibold text-lg text-purplish-blue'>
+          +$12/{formdata.billing === 'yearly' ? 'yr' : 'mo'}
+        </p>
       </div>
 
       <NextBackBtn />
