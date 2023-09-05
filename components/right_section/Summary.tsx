@@ -23,7 +23,7 @@ const Summary = () => {
 
     setTotalPrice(() => {
       const planPrice = pricing[formdata.plan!]
-      
+
       if (formdata.addons?.length! > 0) {
         const addonsPrice = formdata.addons?.reduce((total: number, addon: string) => {
           return total + pricing[addon.toLowerCase().replace(/\s/g, '_')]
@@ -33,6 +33,17 @@ const Summary = () => {
     })
 
   }, [])
+
+  const renderAddons = () => {
+    return formdata.addons?.map((addon: string, i) => {
+      return (
+        <div key={i} className='flex items-center justify-between my-3'>
+          <p className="text-cool-gray">{addon}</p>
+          <p>+${pricing[addon.toLowerCase().replace(' ', '_')]}</p>
+        </div>
+      )
+    })
+  }
 
   return (
     <>
@@ -49,17 +60,10 @@ const Summary = () => {
           </div>
         </div>
 
-        <hr className="my-5" />
+        {(formdata.addons?.length! > 0) && <hr className="my-5" />}
 
-        <div className='flex items-center justify-between my-3'>
-          <p className="text-cool-gray">Online service</p>
-          <p>+$1/mo</p>
-        </div>
+        {renderAddons()}
 
-        <div className='flex items-center justify-between my-3'>
-          <p className="text-cool-gray">Larger storage</p>
-          <p>+$2/mo</p>
-        </div>
       </div>
 
       <div className='flex items-center justify-between p-5'>
