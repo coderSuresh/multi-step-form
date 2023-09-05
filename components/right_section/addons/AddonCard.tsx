@@ -27,7 +27,7 @@ const AddonCard = ({ title, description, price, addons, setAddons }: AddonProps)
                     <h3 className='font-semibold'>{title}</h3>
                     <p className="text-cool-gray">{description}</p>
                 </div>
-                <p className='text-purplish-blue'>+${price}/mo</p>
+                <p className='text-purplish-blue'>{price}</p>
             </label>
         </div>
     )
