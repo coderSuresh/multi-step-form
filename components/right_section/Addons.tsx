@@ -4,6 +4,7 @@ import AddonCard from '@/components/right_section/addons/AddonCard'
 import NextBackBtn from './NextBackBtn'
 import { FormContext } from '@/context/FormContext'
 import { data } from '@/utils/data'
+import { getPricing } from '@/utils/getPricing'
 
 const Addons = () => {
 
@@ -13,24 +14,13 @@ const Addons = () => {
   const [pricing, setPricing] = React.useState<any>(data['monthly'])
   const [billingTime, setBillingTime] = React.useState<string>('mo')
 
-  // TODO: reuse this get pricing function among select plan and addons
-  const getPricing = () => {
-    if (formdata.billing === 'monthly') {
-      setPricing(data['monthly'])
-      setBillingTime('mo')
-    } else {
-      setPricing(data['yearly'])
-      setBillingTime('yr')
-    }
-  }
-
   React.useEffect(() => {
     setFormData({
       ...formdata,
       addons: addons
     })
 
-    getPricing()
+    getPricing(formdata.billing, setPricing, setBillingTime)
 
   }, [addons])
 

@@ -4,6 +4,7 @@ import Plan from '@/components/right_section/select_plan/Plan'
 import NextBackBtn from './NextBackBtn'
 import { FormContext } from '@/context/FormContext'
 import { data } from '@/utils/data'
+import { getPricing } from '@/utils/getPricing'
 
 const SelectPlan = () => {
 
@@ -31,22 +32,12 @@ const SelectPlan = () => {
     })
   }, [plan])
 
-  const getPricing = () => {
-    if (billing === 'monthly') {
-      setPricing(data['monthly'])
-      setBillingTime('mo')
-    } else {
-      setPricing(data['yearly'])
-      setBillingTime('yr')
-    }
-  }
-
   React.useEffect(() => {
     setFormData({
       ...formdata,
       billing: billing as 'monthly' | 'yearly'
     })
-    getPricing()
+    getPricing(billing, setPricing, setBillingTime)
 
   }, [billing])
 
