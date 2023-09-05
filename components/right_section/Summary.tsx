@@ -4,10 +4,12 @@ import NextBackBtn from './NextBackBtn'
 import { FormContext } from '@/context/FormContext'
 import { data } from '@/utils/data'
 import { getPricing } from '@/utils/getPricing'
+import StepContext from '@/context/StepContext'
 
 const Summary = () => {
 
   const { formdata, setFormData } = React.useContext(FormContext)
+  const {setStep} = React.useContext(StepContext)
 
   const [pricing, setPricing] = React.useState<any>(data[formdata.billing || 'monthly'])
   const [totalPrice, setTotalPrice] = React.useState<number>(0)
@@ -53,7 +55,7 @@ const Summary = () => {
             <h3 className='font-semibold'>
               {formdata.plan?.charAt(0).toUpperCase()! + formdata.plan?.slice(1)} ({formdata.billing})
             </h3>
-            <p className='text-cool-gray underline'>Change</p>
+            <button onClick={() => setStep(2)} className='text-cool-gray underline'>Change</button>
           </div>
           <div>
             <p className='font-semibold'>${pricing[formdata.plan!]}</p>
