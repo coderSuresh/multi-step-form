@@ -2,11 +2,14 @@
 import React from 'react'
 import Plan from '@/components/right_section/select_plan/Plan'
 import NextBackBtn from './NextBackBtn'
+import { FormContext } from '@/context/FormContext'
 
 const SelectPlan = () => {
 
-  const [plan, setPlan] = React.useState('arcade')
-  const [billing, setBilling] = React.useState('monthly')
+  const { formdata, setFormData } = React.useContext(FormContext)
+
+  const [plan, setPlan] = React.useState<string>(formdata.plan || 'arcade')
+  const [billing, setBilling] = React.useState<string>(formdata.billing || 'monthly')
 
   const billTogglerRef = React.useRef<HTMLInputElement>(null)
 
@@ -17,6 +20,20 @@ const SelectPlan = () => {
       setBilling('monthly')
     }
   }
+
+  React.useEffect(() => {
+    setFormData({
+      ...formdata,
+      plan: plan as 'arcade' | 'advanced' | 'pro'
+    })
+  }, [plan])
+
+  React.useEffect(() => {
+    setFormData({
+      ...formdata,
+      billing: billing as 'monthly' | 'yearly'
+    })
+  }, [billing])
 
   return (
     <>
@@ -32,7 +49,7 @@ const SelectPlan = () => {
         <p className={`font-semibold ${billing === 'yearly' ? 'text-cool-gray' : ''}`}>Monthly</p>
 
         <div className="toggle">
-          <input type="checkbox" ref={billTogglerRef} onChange={handleBillingChange} className='hidden' id="toggle" />
+          <input type="checkbox" ref={billTogglerRef} checked={billing === 'yearly'} onChange={handleBillingChange} className='hidden' id="toggle" />
           <label htmlFor="toggle" className='cursor-pointer'>
             <div className="outer border h-6 w-10 rounded-full bg-marine-blue relative">
               <div className={`inner border h-3 w-3 rounded-full bg-white transition-all mt-[5px] ${billing === 'yearly' ? 'ml-5' : 'ml-1'}`}></div>
@@ -43,7 +60,7 @@ const SelectPlan = () => {
         <p className={`font-semibold ${billing === 'monthly' ? 'text-cool-gray' : ''}`}>Yearly</p>
       </div>
 
-     <NextBackBtn />
+      <NextBackBtn />
 
     </>
   )

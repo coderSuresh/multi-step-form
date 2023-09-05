@@ -11,7 +11,7 @@ const Plan = ({ name, price, plan, setPlan }: PlanProps) => {
 
     return (
         <>
-            <input type="radio" id={name} checked={plan === name} onChange={() => handlePlanChange(name)} className='hidden' />
+            <input type="radio" id={name} name='plan' checked={plan === name} onChange={() => handlePlanChange(name)} className='hidden' />
             <label htmlFor={name}>
                 <div className={`border ${plan === name && 'border-purplish-blue bg-magnolia'} cursor-pointer rounded-lg p-4 w-32`}>
                     <Image src={`/assets/images/icon-${name}.svg`} height={40} width={40} alt={`${name} icon`} aria-hidden='true' role='presentation' />
