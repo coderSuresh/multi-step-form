@@ -5,6 +5,7 @@ import Addons from '@/components/right_section/Addons'
 import Summary from '@/components/right_section/Summary'
 import Thankyou from '@/components/right_section/Thankyou'
 import StepContext from '@/context/StepContext'
+import FormProvider from '@/providers/FormProvider'
 
 const RightSection = () => {
 
@@ -65,11 +66,13 @@ const RightSection = () => {
                 </div>
             }
 
-            {step === 1 && <Personal />}
-            {step === 2 && <SelectPlan />}
-            {step === 3 && <Addons />}
-            {step === 4 && <Summary />}
-            {step === 5 && <Thankyou />}
+            <FormProvider>
+                {step === 1 && <Personal />}
+                {step === 2 && <SelectPlan />}
+                {step === 3 && <Addons />}
+                {step === 4 && <Summary />}
+                {step === 5 && <Thankyou />}
+            </FormProvider>
 
         </div>
     )
