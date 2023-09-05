@@ -6,8 +6,6 @@ import NextBackBtn from './NextBackBtn'
 
 const SelectPlan = () => {
 
-  const { step, setStep } = React.useContext(StepContext)
-
   const [plan, setPlan] = React.useState('arcade')
   const [billing, setBilling] = React.useState('monthly')
 
