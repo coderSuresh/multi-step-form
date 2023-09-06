@@ -29,7 +29,7 @@ export type HeadingProps = {
 }
 
 export type formProps = {
-    isFormValid: boolean,
+    isFormValid?: boolean,
     setNameError?: React.Dispatch<React.SetStateAction<string>>,
     setEmailError?: React.Dispatch<React.SetStateAction<string>>,
     setPhoneError?: React.Dispatch<React.SetStateAction<string>>,
