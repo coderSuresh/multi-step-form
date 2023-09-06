@@ -6,6 +6,7 @@ import Summary from '@/components/right_section/Summary'
 import Thankyou from '@/components/right_section/Thankyou'
 import StepContext from '@/context/StepContext'
 import FormProvider from '@/providers/FormProvider'
+import NextBackBtn from './right_section/NextBackBtn'
 
 const RightSection = () => {
 
@@ -66,13 +67,15 @@ const RightSection = () => {
                 </div>
             }
 
-            <FormProvider>
-                {step === 1 && <Personal />}
-                {step === 2 && <SelectPlan />}
-                {step === 3 && <Addons />}
-                {step === 4 && <Summary />}
-                {step === 5 && <Thankyou />}
-            </FormProvider>
+            <div className="mb-20">
+                <FormProvider>
+                    {step === 1 && <Personal />}
+                    {step === 2 && <SelectPlan />}
+                    {step === 3 && <Addons />}
+                    {step === 4 && <Summary />}
+                    {step === 5 && <Thankyou />}
+                </FormProvider>
+            </div>
 
         </div>
     )
