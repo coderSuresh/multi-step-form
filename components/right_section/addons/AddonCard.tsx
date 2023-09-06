@@ -14,7 +14,7 @@ const AddonCard = ({ title, description, price, addons, setAddons }: AddonProps)
     }
 
     return (
-        <div className={`${addons.includes(title) && 'border-purplish-blue bg-magnolia'} border w-full rounded-lg p-5 flex items-center gap-5 mb-4`}>
+        <div className={`${addons.includes(title) && 'border-purplish-blue bg-magnolia'} border hover:border-purplish-blue w-full rounded-lg p-5 flex items-center gap-5 mb-4`}>
             <input
                 checked={addons.includes(title)}
                 type="checkbox"
