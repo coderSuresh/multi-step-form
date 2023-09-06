@@ -9,21 +9,25 @@ const NextBackBtn = ({ isFormValid, setNameError, setEmailError, setPhoneError }
     const { formdata } = React.useContext(FormContext)
 
     const handleNextClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-        if (isFormValid) {
-            setStep(step + 1)
-        }
-        else {
-            e.preventDefault()
+        if (setNameError && setEmailError && setPhoneError) {
+            if (isFormValid) {
+                setStep(step + 1)
+            }
+            else {
+                e.preventDefault()
 
-            if (!formdata.name) {
-                setNameError('Name is required')
-            } else setNameError('')
-            if (!formdata.email) {
-                setEmailError('Email is required')
-            } else setEmailError('')
-            if(!formdata.phone) {
-                setPhoneError('Phone is required')
-            } else setPhoneError('')
+                if (!formdata.name) {
+                    setNameError('Name is required')
+                } else setNameError('')
+                if (!formdata.email) {
+                    setEmailError('Email is required')
+                } else setEmailError('')
+                if (!formdata.phone) {
+                    setPhoneError('Phone is required')
+                } else setPhoneError('')
+            }
+        } else {
+            setStep(step + 1)
         }
     }
 
