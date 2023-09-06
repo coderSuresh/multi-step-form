@@ -55,7 +55,7 @@ const Summary = () => {
             <h3 className='font-semibold'>
               {formdata.plan?.charAt(0).toUpperCase()! + formdata.plan?.slice(1)} ({formdata.billing})
             </h3>
-            <button onClick={() => setStep(2)} className='text-cool-gray underline hover:text-marine-blue'>Change</button>
+            <button onClick={() => setStep(2)} className='text-cool-gray underline hover:text-purplish-blue'>Change</button>
           </div>
           <div>
             <p className='font-semibold'>${pricing[formdata.plan!]}</p>
