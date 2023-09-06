@@ -27,3 +27,10 @@ export type HeadingProps = {
     title: string,
     description: string,
 }
+
+export type formProps = {
+    isFormValid: boolean,
+    setNameError: React.Dispatch<React.SetStateAction<string>>,
+    setEmailError: React.Dispatch<React.SetStateAction<string>>,
+    setPhoneError: React.Dispatch<React.SetStateAction<string>>,
+}
