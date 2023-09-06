@@ -38,12 +38,12 @@ Go back to a previous step to update their selections
 
 ## Solution Screenshot
 
-![Solution Screenshot](./solution-screenshot.png)
+![Solution Screenshot](./public/assets/design/screenshot.png)
 
 ## Links
 
--   Solution URL: [Add solution URL here]()
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [https://github.com/coderSuresh/multi-step-form](https://github.com/coderSuresh/multi-step-form)
+-   Live Site URL: [https://multi-step-form-pi-five.vercel.app/](https://multi-step-form-pi-five.vercel.app/)
 
 ## My process
 
