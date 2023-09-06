@@ -24,7 +24,7 @@ const Summary = () => {
     })
 
     setTotalPrice(() => {
-      const planPrice = pricing[formdata.plan!]
+      const planPrice = pricing[formdata.plan || 'arcade']
 
       if (formdata.addons?.length! > 0) {
         const addonsPrice = formdata.addons?.reduce((total: number, addon: string) => {
