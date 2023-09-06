@@ -31,7 +31,7 @@ const Summary = () => {
           return total + pricing[addon.toLowerCase().replace(/\s/g, '_')]
         }, 0)
         return planPrice + addonsPrice
-      }
+      } else return planPrice
     })
 
   }, [])
