@@ -55,7 +55,7 @@ const Personal = () => {
           <label htmlFor="name" className="block mb-1">Name</label>
           {nameError && <span className='text-strawberry-red'>{nameError}</span>}
         </div>
-        <input type="text" value={formdata.name} onInput={(e) => handleChange(e)} id="name" placeholder="eg: Stephen King" className={`border ${nameError && 'border-strawberry-red'} rounded mb-4 p-2 w-full`} />
+        <input type="text" value={formdata.name} onInput={(e) => handleChange(e)} id="name" placeholder="eg: Stephen King" className={`border ${nameError && 'border-strawberry-red'} focus:border-purplish-blue focus:outline-none rounded mb-4 p-2 w-full`} />
       </div>
 
       <div>
@@ -63,7 +63,7 @@ const Personal = () => {
           <label htmlFor="email" className="block mb-1">Email</label>
           {emailError && <span className='text-strawberry-red'>{emailError}</span>}
         </div>
-        <input type="email" value={formdata.email} onInput={(e) => handleChange(e)} id="email" placeholder="eg: stephenking@lorem.com" className={`border ${emailError && 'border-strawberry-red'} rounded mb-4 p-2 w-full`} />
+        <input type="email" value={formdata.email} onInput={(e) => handleChange(e)} id="email" placeholder="eg: stephenking@lorem.com" className={`border ${emailError && 'border-strawberry-red'} focus:border-purplish-blue focus:outline-none rounded mb-4 p-2 w-full`} />
       </div>
 
       <div>
@@ -71,7 +71,7 @@ const Personal = () => {
           <label htmlFor="phone" className="block mb-1">Phone</label>
           {phoneError && <span className='text-strawberry-red'>{phoneError}</span>}
         </div>
-        <input type="tel" value={formdata.phone} onInput={(e) => handleChange(e)} id="phone" placeholder="eg: +1 234 567 890" className={`border ${phoneError && 'border-strawberry-red'} rounded mb-4 p-2 w-full`} />
+        <input type="tel" value={formdata.phone} onInput={(e) => handleChange(e)} id="phone" placeholder="eg: +1 234 567 890" className={`border ${phoneError && 'border-strawberry-red'} focus:border-purplish-blue focus:outline-none rounded mb-4 p-2 w-full`} />
       </div>
 
       <NextBackBtn
