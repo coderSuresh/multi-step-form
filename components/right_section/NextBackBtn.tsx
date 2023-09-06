@@ -16,15 +16,15 @@ const NextBackBtn = ({ isFormValid, setNameError, setEmailError, setPhoneError }
             else {
                 e.preventDefault()
 
-                if (!formdata.name) {
+                if (!formdata.name?.trim()) {
                     setNameError('Name is required')
-                } else setNameError('')
-                if (!formdata.email) {
+                }
+                if (!formdata.email?.trim()) {
                     setEmailError('Email is required')
-                } else setEmailError('')
-                if (!formdata.phone) {
+                }
+                if (!formdata.phone?.trim()) {
                     setPhoneError('Phone is required')
-                } else setPhoneError('')
+                }
             }
         } else {
             setStep(step + 1)
