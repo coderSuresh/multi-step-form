@@ -57,7 +57,7 @@ const RightSection = () => {
     }, [step])
 
     return (
-        <div className="form__right bg-white mt-16 md:mt-0 rounded-lg mx-auto md:p-10 p-5 text-marine-blue text-sm w-full md:h-auto h-fit relative">
+        <div className="form__right bg-white absolute top-28 w-[calc(100%-24px)] left-0 mx-3 md:mt-0 rounded-lg md:mx-auto-10 p-5 text-marine-blue text-sm md:w-full md:h-auto h-fit md:relative md:top-0">
 
             {
                 step <= 4 &&
