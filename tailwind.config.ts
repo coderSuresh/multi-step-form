@@ -23,6 +23,7 @@ const config: Config = {
 
       backgroundImage: {
         'desktop-sidebar': 'url("/assets/images/bg-sidebar-desktop.svg")',
+        'mobile-sidebar': 'url("/assets/images/bg-sidebar-mobile.svg")',
       }
     },
   },

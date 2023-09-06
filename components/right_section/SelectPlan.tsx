@@ -43,7 +43,7 @@ const SelectPlan = () => {
 
   return (
     <>
-      <div className='flex gap-2 mt-10'>
+      <div className='flex justify-center gap-2 mt-10'>
 
         <Plan name='arcade' plan={plan} price={`$${pricing.arcade}/${billingTime}`} setPlan={setPlan} />
         <Plan name='advanced' plan={plan} price={`$${pricing.advanced}/${billingTime}`} setPlan={setPlan} />

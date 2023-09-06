@@ -9,8 +9,8 @@ const LeftSectionBullet = ({step, title, active} : LeftSectionBulletProps) => {
           </div>
 
           <div>
-              <p className="uppercase text-xs text-cool-gray">Step {step}</p>
-              <h2 className="font-medium text-sm text-white uppercase mt-1">{ title }</h2>
+              <p className="uppercase text-xs text-cool-gray md:block hidden">Step {step}</p>
+              <h2 className="font-medium text-sm text-white uppercase mt-1 md:block hidden">{ title }</h2>
           </div>
       </div>
   )

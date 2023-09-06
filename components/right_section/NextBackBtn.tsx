@@ -32,10 +32,9 @@ const NextBackBtn = ({ isFormValid, setNameError, setEmailError, setPhoneError }
     }
 
     return (
-        <div className='flex items-center justify-between mb-5 w-full absolute bottom-0'>
-            {step > 1 && <button type='button' onClick={() => setStep(step - 1)} className='hover:text-marine-blue text-cool-gray'>Go Back</button>}
-
-            <button type="submit" onClick={handleNextClick} className={` ${step === 4 ? 'bg-purplish-blue' : 'bg-marine-blue'} ${step === 1 && 'mb-5'} hover:opacity-90 w-fit absolute right-20 text-white rounded-lg px-4 py-2 font-semibold`}>
+        <div className='flex items-center justify-between md:mb-5 w-full md:absolute fixed bottom-0 left-0 bg-white md:h-auto md:px-10 md:py-0 h-16 mb-0 p-5'>
+            {step > 1 ? <button type='button' onClick={() => setStep(step - 1)} className='hover:text-marine-blue text-cool-gray'>Go Back</button> : <div></div>}
+            <button type="submit" onClick={handleNextClick} className={` ${step === 4 ? 'bg-purplish-blue' : 'bg-marine-blue'} hover:opacity-90 w-fit text-white rounded-lg px-4 py-2 font-semibold`}>
                 {step === 4 ? 'Confirm' : 'Next Step'}
             </button>
         </div>
