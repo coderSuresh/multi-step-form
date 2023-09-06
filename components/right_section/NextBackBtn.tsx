@@ -33,7 +33,7 @@ const NextBackBtn = ({ isFormValid, setNameError, setEmailError, setPhoneError }
 
     return (
         <div className='flex items-center justify-between mb-5 w-full absolute bottom-0'>
-            {step > 1 && <button type='button' onClick={() => setStep(step - 1)} className='text-cool-gray'>Go Back</button>}
+            {step > 1 && <button type='button' onClick={() => setStep(step - 1)} className='hover:text-marine-blue text-cool-gray'>Go Back</button>}
 
             <button type="submit" onClick={handleNextClick} className={` ${step === 4 ? 'bg-purplish-blue' : 'bg-marine-blue'} ${step === 1 && 'mb-5'} w-fit absolute right-20 text-white rounded-lg px-4 py-2 font-semibold`}>
                 {step === 4 ? 'Confirm' : 'Next Step'}
